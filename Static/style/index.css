@@ -1,0 +1,968 @@
+@import url('http://fonts.cdnfonts.com/css/gilroy-bold?styles=20876,20877,20878,20879,20880');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+/*defining colors*/
+:root
+{
+    --transparent: rgba(0,0,0,0.0);
+    --white : #FFFFFF;
+    --darktext : #2B2B2B;
+    --largertext: #2D2D2D;
+    --orangetext: #FF6107;
+    --background: #F2F2F2;
+    --btnwhite: #FF9E66;
+    --greytext:#BDBDBD;
+}
+
+/*universal variables*/
+* 
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Gilroy',sans-serif;
+}
+
+html,body{
+    overflow-x:hidden;
+}
+
+
+body
+{
+    color: var(--darktext);
+    background-color: var(--background);
+    height: 100vh;
+    position:relative;
+}
+
+/* styling header*/
+header nav.nav-properties
+{
+    padding: 30px 2%;
+    background-color: var(--transparent);
+}
+
+header a.nav-page-link
+{
+    color: var(--darktext) !important;
+    font-weight: 500;
+    margin-right: 1vw;
+    transition: .3s;
+}
+
+header a.nav-page-link:hover
+{
+    color: var(--orangetext) !important;
+}
+
+header a.active
+{
+    color: var(--orangetext) !important;
+}
+
+header a.nav-page-btn
+{
+    position: absolute;
+    right:3vw;
+    text-align: center;
+    width: 143px;
+    padding : 12px 0;
+    background: linear-gradient(95.85deg, var(--btnwhite) 0%, var(--orangetext) 95.35%);
+    color: var(--white) !important;
+    font-weight: 500;
+    transition: .3s;
+    box-shadow: 10px 10px 35px #AAAAAA, -20px -20px 35px #FFFFFF;
+}
+
+header a.nav-page-btn:hover
+{
+    color: var(--darktext) !important;
+}
+
+header button.navbar-toggler
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: auto;
+    height: 30px;
+    transition: all .3s ease-in-out;
+    border: none;
+    z-index: 999999;
+}
+
+header button.navbar-toggler:focus
+{    
+    box-shadow:none;
+    border: none;
+}
+
+header div.navbar-toggler-myicon
+{
+    display:flex;
+    width: 20px;
+    height:2px;
+    background-color: var(--orangetext);
+    border-radius: 4px;
+    transition: all .3s ease-in-out;
+}
+
+header div.navbar-toggler-myicon::before,
+header div.navbar-toggler-myicon::after
+{
+    content: '';
+    position:absolute;
+    width: 30px;
+    height:2px;
+    background-color: var(--orangetext);
+    border-radius: 4px;
+    transition: all .3s ease-in-out;
+}
+
+header div.navbar-toggler-myicon::before
+{
+    transform: translateY(8px);
+}
+
+header div.navbar-toggler-myicon::after
+{
+    transform: translateY(-8px);
+}
+
+header button.navbar-toggler.open div.navbar-toggler-myicon
+{
+    transform:translateX(-40px);
+    background: transparent;
+}
+
+header button.navbar-toggler.open div.navbar-toggler-myicon::before
+{
+    transform: rotate(45deg) translate(25px,-25px);
+}
+
+header button.navbar-toggler.open div.navbar-toggler-myicon::after
+{
+    transform: rotate(-45deg) translate(25px,25px);
+}
+
+header div.offcanvas
+{
+display: none;
+}
+
+
+@media only screen and (max-width:767px)
+{
+
+    header div.navbar-collapse
+    {
+        display: none !important;
+    }
+
+    header a.nav-page-btn
+    {
+    bottom: 10%;
+    left: 7%;
+    width: 120px;
+    }
+
+    header div.offcanvas
+{
+    display: block;
+    background-color: var(--background);
+    width: 200px;
+}
+
+}
+
+@media only screen 
+and (max-height:375px)
+and (max-width:767px)
+{
+    header a.nav-page-btn
+    {
+    bottom:unset;
+    margin-top: 3%;
+    }
+}
+
+
+@media only screen and (min-width:767px)
+{
+    header a.navbar-brand
+{
+    position: absolute;
+}
+
+}
+/* header styling ends*/
+
+
+/*main content styling*/
+
+div.main-body div.main-body-images ,
+div.main-body div.main-body-texts,
+div.main-body div.main-body-images img.main-body-image-boy,
+div.main-body div.main-body-images img.main-body-image-boy768,
+div.main-body div.main-body-images img.main-body-image-boy-small,
+div.main-body div.main-body-images img.main-body-image-sand-1,
+div.main-body div.main-body-images img.main-body-image-sand-2,
+div.main-body div.main-body-images img.main-body-image-sand-1768,
+div.main-body div.main-body-images img.main-body-image-sand-2768
+{
+    position: absolute;
+}
+
+div.main-body div.main-body-texts p.main-body-text1,
+div.main-body div.main-body-texts p.main-body-text2
+{
+    position:relative;
+}
+
+div.main-body div.main-body-images img.main-body-image-boy768,
+div.main-body div.main-body-images img.main-body-image-boy-small,
+div.main-body div.main-body-images img.main-body-image-sand-1768,
+div.main-body div.main-body-images img.main-body-image-sand-2768
+{
+display: none;
+}
+
+
+div.main-body div.main-body-images
+{
+    width: 100vw;
+}
+
+div.main-body div.main-body-images img.main-body-image-boy,
+div.main-body div.main-body-images img.main-body-image-boy768
+div.main-body div.main-body-images img.main-body-image-boy-small
+{
+    left:50vw;
+    transform: translateX(-50%);
+    z-index:10;
+}
+
+div.main-body div.main-body-images img.main-body-image-sand-1
+{
+    left:45vw;
+    top: 510px;
+    transform: translateX(-50%);
+}
+
+div.main-body div.main-body-images img.main-body-image-sand-2
+{
+    left:70vw;
+    top:350px;
+    transform: translateX(-50%);
+}
+
+div.main-body div.main-body-texts
+{
+    width:100vw;
+}
+
+div.main-body div.main-body-texts p.main-body-text1
+{
+    top: 100px;
+    font-size: 140px;
+    font-weight: 900;
+    text-align:center;
+}
+
+div.main-body div.main-body-texts p.main-body-text2
+{
+    line-height: 230px;
+    font-size: 140px;
+    font-weight: 900;
+    text-align:center;
+    z-index: 20;
+}
+
+div.main-body div.main-body-texts p.main-body-text2 span
+{
+color: var(--orangetext);
+}
+
+
+
+div.training-programs-small{
+    display:none;
+}
+
+div.training-programs div.training-programs-toggle
+{
+    position: absolute;
+    left: 5vw;
+    top: 680px;
+}
+
+div.training-programs div.training-programs-toggle-text
+{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+div.training-programs button.training-programs-toggler-prev, div.training-programs button.training-programs-toggler-next
+{
+    margin-top:20px;
+    border-radius:50%;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--darktext);
+    transition: all 0.3s ;
+    cursor: pointer;
+    }
+
+    div.training-programs button.training-programs-toggler-prev:hover , div.training-programs button.training-programs-toggler-next:hover
+    {
+        background-color: var(--orangetext);
+    }
+
+
+    div.training-programs button.training-programs-toggler-next
+    {
+        margin-left:10px;
+    }
+
+    div.training-programs button.training-programs-toggler-prev i, div.training-programs button.training-programs-toggler-next i
+    {
+        font-size:20px;
+    }
+
+    div.training-programs div.training-programs-type
+    {
+        display:flex;
+        position:absolute;
+        top: 610px;
+        right: 5vw;
+        z-index:25;
+    }
+
+div.training-programs div.training-programs-card
+{
+    margin: auto;
+    width: 300px;
+    height: 250px;
+    padding: 30px 30px;
+    margin-right: 20px;
+    background-color: var(--white);
+    transition : all .3s ;
+}
+
+div.training-programs div.training-programs-card div.training-program-header,
+div.training-programs div.training-programs-card div.training-program-end
+{
+    width:100%;
+    display: flex;
+}
+
+div.training-programs div.training-programs-card h4
+{
+    font-weight:500;
+    padding-bottom: 15px;
+}
+
+div.training-programs div.training-programs-card div.emoji-div,
+div.training-programs div.training-programs-card i
+{
+margin-left: auto;
+}
+
+div.training-programs div.training-programs-card p.training-program-text
+{
+    font-size: 14px;
+    padding-bottom:10px;
+}
+
+div.training-programs div.training-programs-card p.details
+{
+    font-size: 14px;
+}
+
+div.training-programs div.training-programs-card.active-card
+{
+    width:300px;
+    height: 300px;
+    background: linear-gradient(134.46deg, #555555 0%, #313131 100%);
+    box-shadow: 3px 20px 35px #888888;
+}
+
+div.training-programs div.training-programs-card.active-card h4
+{
+    color: var(--white);
+}
+
+div.training-programs div.training-programs-card.active-card p.training-program-text
+{
+    color: var(--greytext);
+    font-size: 16px;
+}
+
+div.training-programs div.training-programs-card.active-card p.details,
+div.training-programs div.training-programs-card.active-card i
+{
+    color: var(--white);
+}
+
+
+/*main content styling ends*/
+
+
+/* responsiveness starts*/
+
+@media only screen and
+(max-height:768px)
+and (max-width:1366px)
+{
+    div.main-body div.main-body-images img.main-body-image-boy
+    {
+        display:none;
+    }
+    
+    div.main-body div.main-body-images img.main-body-image-boy768
+    {
+        display:block;
+        top: -50px;
+        left:50vw;
+        transform: translateX(-50%);
+        z-index:20;
+    
+    }
+
+    div.main-body div.main-body-texts p.main-body-text1
+{
+    top: 20px;
+    font-size: 110px;
+}
+
+div.main-body div.main-body-texts p.main-body-text2
+{
+    line-height: 60px;
+    font-size: 110px;
+}
+
+div.main-body div.main-body-images img.main-body-image-sand-1,
+div.main-body div.main-body-images img.main-body-image-sand-2
+{
+    display: none;
+}
+
+div.main-body div.main-body-images img.main-body-image-sand-1768
+{
+    display:block;
+    left:31vw;
+    top: 320px;
+}
+
+div.main-body div.main-body-images img.main-body-image-sand-2768
+{
+    display:block;
+    left:64vw;
+    top:200px;
+}
+
+div.training-programs div.training-programs-toggle
+{
+    top: 430px;
+}
+
+div.training-programs div.training-programs-type
+{
+    display:flex;
+    position:absolute;
+    top: 390px;
+    right: 5vw;
+}
+
+div.training-programs div.training-programs-card
+{
+    width: 250px;
+    height: 220px;
+    padding: 20px 20px;
+    margin-right: 15px;
+    background-color: var(--white);
+}
+
+div.training-programs div.training-programs-toggle-text
+{
+    font-size: 40px;
+    line-height: 50px;
+}
+
+div.training-programs div.training-programs-card h4
+{
+    font-size: 24px;
+    font-weight:500;
+    padding-bottom: 2px;
+}
+
+div.training-programs div.training-programs-card p.training-program-text
+{
+    font-size: 13px;
+    padding-bottom:0px;
+}
+
+div.training-programs div.training-programs-card p.details
+{
+    font-size: 13px;
+}
+
+div.training-programs div.training-programs-card.active-card
+{
+    width:250px;
+    height: 250px;
+}
+
+div.training-programs div.training-programs-card.active-card p.training-program-text
+{
+    color: var(--greytext);
+    font-size: 14px;
+}
+
+div.training-programs div.training-programs-card.active-card p.training-program-text
+{
+    color: var(--greytext);
+    font-size: 14px;
+}
+
+}
+
+@media only screen 
+and (max-width:1300px)
+and (min-width:991px)
+{
+    div.main-body div.main-body-texts p.main-body-text1
+{
+    top: 20px;
+    font-size: 100px;
+}
+
+div.main-body div.main-body-texts p.main-body-text2
+{
+    line-height: 60px;
+    font-size: 100px;
+}
+
+div.training-programs div.training-programs-toggle
+{
+    top: 470x;
+}
+
+div.training-programs div.training-programs-toggle-text
+{
+    display: none;
+}
+
+div.training-programs button.training-programs-toggler-prev, div.training-programs button.training-programs-toggler-next
+{
+    display:block;
+    margin: auto;
+    margin-top:20px;
+    border-radius:50%;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--darktext);
+    transition: all 0.3s ;
+    cursor: pointer;
+    }
+
+    div.training-programs div.training-programs-card.active-card p.training-program-text
+    {
+        color: var(--greytext);
+        font-size: 14px;
+    }
+    
+}
+
+@media only screen
+and (max-width:1300px)
+and (min-height: 770px)
+{
+    div.main-body div.main-body-texts p.main-body-text1
+    {
+        top: 120px;
+        font-size: 110px;
+    }
+    
+    div.main-body div.main-body-texts p.main-body-text2
+    {
+        line-height: 270px;
+        font-size: 110px;
+    }
+    
+}
+
+@media only screen
+and (max-width:990px)
+{
+
+    div.main-body div.main-body-texts p.main-body-text1
+{
+    top: 30px;
+    font-size: 85px;
+}
+
+div.main-body div.main-body-texts p.main-body-text2
+{
+    line-height: 100px;
+    font-size: 85px;
+}
+
+
+
+
+    div.training-programs
+    {
+        display: none;
+    }
+
+    div.training-programs-small
+    {
+        display: block;
+    }
+
+
+    div.training-programs-small div.trainig-programs-toggler-prev-div-small
+{
+    position: absolute;
+    bottom: 10vh;
+    left: 5vw;
+}
+div.training-programs-small div.trainig-programs-toggler-next-div-small
+{
+    position: absolute;
+    bottom: 10vh;
+    right: 5vw;
+}
+
+div.training-programs-small button.training-programs-toggler-prev-small, div.training-programs-small button.training-programs-toggler-next-small
+{
+    border-radius:50%;
+    position:relative;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--darktext);
+    transition: all 0.3s ;
+    cursor: pointer;
+    z-index: 25;
+    }
+
+    div.training-programs-small button.training-programs-toggler-prev-small:hover , div.training-programs-small button.training-programs-toggler-next-small:hover
+    {
+        background-color: var(--orangetext);
+    }
+
+    div.training-programs-small button.training-programs-toggler-prev-small i, div.training-programs-small button.training-programs-toggler-next-small i
+    {
+        font-size:20px;
+    }
+
+    div.training-programs-small div.training-program-running-small,
+    div.training-programs-small div.training-program-dumbbell-small,
+    div.training-programs-small div.training-program-yoga-small
+    {
+        position:absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-46.2%);
+        z-index: 30;
+        display:none;
+    }
+
+
+div.training-programs-small div.training-programs-card-small
+{
+    position:relative;
+    border-radius: 20px 20px 0 0;
+    width: 500px;
+    height: 200px;
+    padding: 20px 20px;
+    margin-right: 20px;
+    background:linear-gradient(134.46deg, #555555 0%, #313131 100%);
+    transition : all .3s ;
+}
+
+div.training-programs-small div.training-programs-card-small div.training-program-header-small,
+div.training-programs-small div.training-programs-card-small div.training-program-end-small
+{
+    width:100%;
+    display: flex;
+}
+
+div.training-programs-small div.training-programs-card-small h4
+{
+    font-weight:500;
+    padding-bottom: 15px;
+    color : var(--white);
+}
+
+div.training-programs-small div.training-programs-card-small div.emoji-div,
+div.training-programs-small div.training-programs-card-small i
+{
+margin-left: auto;
+color: var(--greytext);
+}
+
+div.training-programs-small div.training-programs-card-small p.training-program-text-small
+{
+    font-size: 14px;
+    padding-bottom:1px;
+    color: var(--greytext);
+}
+
+div.training-programs-small div.training-programs-card-small p.details
+{
+    font-size: 14px;
+    color: var(--greytext);
+}
+
+div.training-programs-small div.training-program-running-small.active-card,
+div.training-programs-small div.training-program-dumbbell-small.active-card,
+div.training-programs-small div.training-program-yoga-small.active-card
+{
+    display: block;
+}
+
+}
+
+
+@media only screen
+and (max-width:767px)
+{
+    div.main-body div.main-body-texts p.main-body-text1
+    {
+        top: 60px;
+        font-size: 60px;
+    }
+    
+    div.main-body div.main-body-texts p.main-body-text2
+    {
+        line-height: 140px;
+        font-size: 60px;
+    }    
+    
+        div.training-programs-small div.trainig-programs-toggler-prev-div-small
+    {
+        position: absolute;
+        bottom: 10vh;
+        left: 5vw;
+    }
+    div.training-programs-small div.trainig-programs-toggler-next-div-small
+    {
+        position: absolute;
+        bottom: 10vh;
+        right: 5vw;
+    }
+        
+    
+        div.training-programs-small button.training-programs-toggler-prev-small i, div.training-programs-small button.training-programs-toggler-next-small i
+        {
+            font-size:16px;
+        }
+    
+    div.training-programs-small div.training-programs-card-small
+    {
+        width: 400px;
+    }
+
+    div.main-body div.main-body-images img.main-body-image-sand-1768
+{
+    left:10vw;
+}
+
+div.main-body div.main-body-images img.main-body-image-sand-2768
+{
+    left:70vw;
+}
+
+}
+
+@media only screen
+and (max-width:576px)
+{
+
+    div.main-body div.main-body-images img.main-body-image-boy768
+{
+    z-index: 20;
+}
+    div.main-body div.main-body-texts p.main-body-text1
+    {
+        top: 60px;
+        font-size: 50px;
+    }
+    
+    div.main-body div.main-body-texts p.main-body-text2
+    {
+        line-height: 140px;
+        font-size: 50px;
+    }    
+    
+        div.training-programs-small div.trainig-programs-toggler-prev-div-small
+    {
+        position: absolute;
+        bottom: 10vh;
+        left: 5vw;
+    }
+    div.training-programs-small div.trainig-programs-toggler-next-div-small
+    {
+        position: absolute;
+        bottom: 10vh;
+        right: 5vw;
+    }
+        
+    
+        div.training-programs-small button.training-programs-toggler-prev-small i, div.training-programs-small button.training-programs-toggler-next-small i
+        {
+            font-size:16px;
+        }
+    
+    div.training-programs-small div.training-programs-card-small
+    {
+        width: 300px;
+    }
+        
+    
+
+}
+
+@media only screen
+and (max-width:450px)
+{
+
+    div.main-body div.main-body-images img.main-body-image-boy768,
+    div.main-body div.main-body-images img.main-body-image-boy
+    {
+    display:none;
+}
+
+div.main-body div.main-body-images img.main-body-image-boy-small
+{
+    display:block;
+    position: absolute;
+    z-index: 20;
+}
+
+    div.main-body div.main-body-texts p.main-body-text1
+    {
+        top:100px;
+        font-size: 40px;
+    }
+    
+    div.main-body div.main-body-texts p.main-body-text2
+    {
+        line-height:230px;
+        font-size: 40px;
+    }    
+    
+        div.training-programs-small div.trainig-programs-toggler-prev-div-small
+    {
+        position: absolute;
+        bottom: 10vh;
+        left: 3vw;
+    }
+    div.training-programs-small div.trainig-programs-toggler-next-div-small
+    {
+        position: absolute;
+        bottom: 10vh;
+        right: 3vw;
+    }
+        
+    
+        div.training-programs-small button.training-programs-toggler-prev-small i, div.training-programs-small button.training-programs-toggler-next-small i
+        {
+            font-size:16px;
+        }
+    
+    div.training-programs-small div.training-programs-card-small
+    {
+        width: 250px;
+    }
+
+    div.main-body div.main-body-images img.main-body-image-sand-1768
+    {
+        left:3vw;
+    }
+    
+    div.main-body div.main-body-images img.main-body-image-sand-2768
+    {
+        left:75vw;
+    }
+    
+    div.training-programs-small div.training-programs-card-small h4
+    {
+        padding-bottom: 0px;
+    }
+        
+    div.training-programs-small div.training-programs-card-small p.training-program-text-small
+    {
+        font-size: 13px;
+        padding-bottom:0px;
+        color: var(--greytext);
+    }
+
+    div.training-programs-small div.training-programs-card-small p.details
+    {
+        font-size: 13px;
+    }
+
+    
+}
+
+@media only screen
+and (max-width:500px)
+and (min-height:800px)
+{
+    div.main-body div.main-body-images img.main-body-image-boy768,
+    div.main-body div.main-body-images img.main-body-image-boy-small
+    {
+    display:none;
+}
+
+div.main-body div.main-body-images img.main-body-image-boy768
+{
+    display:block;
+    position: absolute;
+    z-index: 20;
+    left: -10vw;
+    top: 50px;
+    z-index:20;
+
+}
+
+
+div.main-body div.main-body-texts p.main-body-text1
+{
+top: 160px;
+}
+
+div.main-body div.main-body-texts p.main-body-text2
+{
+line-height: 350px;
+}
+
+div.main-body div.main-body-images img.main-body-image-sand-1,
+div.main-body div.main-body-images img.main-body-image-sand-2
+{
+    display:none;
+}
+
+
+
+div.main-body div.main-body-images img.main-body-image-sand-1768
+{
+    display:block;
+    left:0vw;
+    top: 400px;
+}
+
+div.main-body div.main-body-images img.main-body-image-sand-2768
+{
+    display:block;
+    left:80vw;
+    top:330px;
+}
+
+}
+/* responsiveness ends*/
